@@ -1,6 +1,6 @@
 # Puppeteer Authentication & Cookie Saver
 
-A standalone, highly-configurable Node.js tool using **Puppeteer** to log in to websites and save session cookies to a local text file. This is perfect for building web scrapers, automated testing, or bypass scripts that reuse active login sessions.
+A standalone, configurable Node.js tool using Puppeteer to log in to websites and save session cookies to a local text file. Created for building web scrapers, automated testing, or bypass scripts that reuse active login sessions.
 
 ---
 
@@ -18,7 +18,7 @@ A standalone, highly-configurable Node.js tool using **Puppeteer** to log in to 
 - `auth.js` — The main authentication and cookie extraction script.
 - `test-cookies.js` — The cookie verification and session recovery script.
 - `cookies.json` — (Generated) The text file where Puppeteer cookies are saved.
-- `dashboard-proof.png` — (Generated) A screenshot captured by the test script showing successful authenticated navigation.
+- `proof.png` — (Generated) A screenshot captured by the test script showing successful authenticated navigation.
 
 ---
 
@@ -36,7 +36,7 @@ npm install
 
 ### 1. Configure the Target Website
 
-Open [auth.js](file:///home/user/Documents/Website%20Masjid/puppeteer-auth/auth.js) and locate the `CONFIG` object at the top of the file:
+Open [auth.js](script_directory/puppeteer-auth/auth.js) and locate the `CONFIG` object at the top of the file:
 
 ```javascript
 const CONFIG = {
@@ -81,7 +81,7 @@ The session cookies will be saved in JSON format inside `cookies.json`.
 
 To verify that the saved session cookies successfully restore your session without having to log in again:
 
-1. Open [test-cookies.js](file:///home/user/Documents/Website%20Masjid/puppeteer-auth/test-cookies.js).
+1. Open [test-cookies.js](script_directory/puppeteer-auth/test-cookies.js).
 2. Set the `CONFIG.protectedUrl` to a URL that requires authentication (e.g., your dashboard, user profile page, etc.).
 3. Run the tester:
 
